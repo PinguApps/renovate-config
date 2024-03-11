@@ -1,0 +1,17 @@
+{
+  "name": "renovate-config",
+  "version": "1.0.0",
+  "description": "PinguApps' config for Renovate",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PinguApps/renovate-config.git"
+  },
+  "scripts": {
+    "validate": "renovate-config-validator default.json",
+    "test": "npm run validate"
+  },
+  "author": "PinguApps",
+  "devDependencies": {
+    "renovate": "^37.235.1"
+  }
+}

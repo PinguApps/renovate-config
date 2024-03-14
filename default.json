@@ -1,41 +1,54 @@
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": [
-      "config:best-practices"
-    ],
-    "assignees": ["pingu2k4"],
-    "reviewers": ["pingu2k4"],
-    "labels": ["dependencies"],
-    "prConcurrentLimit": 0,
-    "prHourlyLimit": 0,
-    "packageRules": [
-      {
-        "matchUpdateTypes": ["major"],
-        "addLabels": ["type/major"]
-      },
-      {
-        "matchUpdateTypes": ["minor"],
-        "addLabels": ["type/minor"]
-      },
-      {
-        "matchUpdateTypes": ["patch"],
-        "addLabels": ["type/patch"]
-      },
-      {
-        "matchUpdateTypes": ["digest"],
-        "addLabels": ["type/digest"]
-      },
-      {
-        "matchCategories": ["dotnet"],
-        "addLabels": ["dotnet"]
-      },
-      {
-        "matchCategories": ["js"],
-        "addLabels": ["js"]
-      },
-      {
-        "matchManagers": ["github-actions"],
-        "addLabels": ["github-action"]
-      }
-    ]
-  }
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices"
+  ],
+  "assignees": ["pingu2k4"],
+  "reviewers": ["pingu2k4"],
+  "labels": ["dependencies"],
+  "prConcurrentLimit": 0,
+  "prHourlyLimit": 0,
+  "packageRules": [
+    {
+      "packageNames": ["Renovate"],
+      "updateTypes": ["minor", "patch"],
+      "automerge": true,
+      "addLabels": ["auto"]
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "addLabels": ["type/major"]
+    },
+    {
+      "matchUpdateTypes": ["minor"],
+      "addLabels": ["type/minor"]
+    },
+    {
+      "matchUpdateTypes": ["patch"],
+      "addLabels": ["type/patch"]
+    },
+    {
+      "matchUpdateTypes": ["digest"],
+      "addLabels": ["type/digest"]
+    },
+    {
+      "matchCategories": ["dotnet"],
+      "addLabels": ["dotnet"]
+    },
+    {
+      "matchCategories": ["js"],
+      "addLabels": ["js"]
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "addLabels": ["github-action"]
+    }
+  ],
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/vendor/**",
+    "**/__tests__/**",
+    "**/__fixtures__/**"
+  ]
+}

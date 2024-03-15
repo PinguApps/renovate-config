@@ -10,7 +10,7 @@
   "prHourlyLimit": 0,
   "packageRules": [
     {
-      "packageNames": ["Renovate"],
+      "packageNames": ["renovate"],
       "updateTypes": ["minor", "patch"],
       "automerge": true,
       "addLabels": ["auto"]

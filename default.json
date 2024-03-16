@@ -6,14 +6,19 @@
   "assignees": ["pingu2k4"],
   "reviewers": ["pingu2k4"],
   "labels": ["dependencies"],
+  "minimumReleaseAge": "36 hours",
   "prConcurrentLimit": 0,
   "prHourlyLimit": 0,
   "packageRules": [
     {
-      "packageNames": ["renovate"],
-      "updateTypes": ["minor", "patch"],
+      "matchPackageNames": ["renovate"],
+      "matchUpdateTypes": ["minor", "patch"],
       "automerge": true,
       "addLabels": ["auto"]
+    },
+    {
+      "matchDatasources": ["npm"],
+      "minimumReleaseAge": "3 days"
     },
     {
       "matchUpdateTypes": ["major"],

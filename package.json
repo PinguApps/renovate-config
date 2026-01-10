@@ -12,6 +12,6 @@
   },
   "author": "PinguApps",
   "devDependencies": {
-    "renovate": "42.72.0"
+    "renovate": "42.74.2"
   }
 }

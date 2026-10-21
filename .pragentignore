@@ -1,0 +1,3 @@
+# PR Agent review scope uses Git ignore syntax; this file remains reviewable.
+# No exclusions: configuration and the npm lockfile need dependency review.
+# Future agents: use $pragent-ignore to audit generated output before adding rules.

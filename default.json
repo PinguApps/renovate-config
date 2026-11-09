@@ -11,6 +11,12 @@
   "prHourlyLimit": 0,
   "packageRules": [
     {
+      "description": "Allow Docker digest pinning without release timestamps",
+      "matchDatasources": ["docker"],
+      "matchUpdateTypes": ["pinDigest"],
+      "minimumReleaseAge": null
+    },
+    {
       "matchPackageNames": ["renovate"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true,
